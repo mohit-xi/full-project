@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+
+<div class="jumbotron text-center">
+    <h1>Welcome to WeBlog</h1>
+    
+    <p class="lead">A MEAN Stack Application by <strong>Mohit Sharma</strong></p>
+    <div>
+      <a *ngIf="!authService.loggedIn()" routerLink="/register" class="btn btn-primary" style="margin:5px;" >Register</a>
+      <a *ngIf="!authService.loggedIn()" routerLink="/login"  class="btn btn-default"style="margin:5px;" >Login</a>
+      <a *ngIf="authService.loggedIn()" routerLink="/blog"  class="btn btn-success" style="margin:5px;">View Blogs</a>
+    </div>
+  </div>
+</body>
+</html>
